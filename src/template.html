@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Awesome -->
-    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title><%=htmlWebpackPlugin.options.title%></title>
 </head>
+
 <body>
-<main>
-    <section id="todo">
-        <div class="heading">
-            <h3>Today's To Do</h3>
-            <i class="fa-solid fa-arrows-rotate"></i>
-        </div>
-    </section>
-</main>
+    <main>
+        <section id="todo-section" class="container">
+            <div class="heading">
+                <h3>Today's To Do</h3>
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <form>
+                <input type="text" placeholder="Add to your list" required>
+                <i class="bi bi-arrow-return-left"></i>
+            </form>
+            <ul class="todo-list">
+                <li> <input type="checkbox" name="completed" id="completed"> walk the dog walk the dog walk the dog<i
+                        class="bi bi-three-dots-vertical"></i></li>
+            </ul>
+            <p id="clear-completed">Clear all completed</p>
+        </section>
+    </main>
 </body>
+
 </html>

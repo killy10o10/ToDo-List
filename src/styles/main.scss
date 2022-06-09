@@ -1,8 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+*,
+*::after,
+*::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+// Variables
 $primary-color: #2fa8cc;
 $secondary-color: #f4f4f4;
 $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+$light: #a4b1aa;
+$borderb: 1px solid #e0e0e0;
+$transition: all 250ms ease-out;
 
 * {
   box-sizing: border-box;
@@ -10,25 +23,43 @@ $box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 
 body {
   background-color: $primary-color;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
   padding: 20px;
 }
 
 .container {
-  background-color: $secondary-color;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 1px solid rgba(220, 220, 220, 1);
+  width: 500px;
+  background-color: #fff;
   box-shadow: $box-shadow;
-  padding: 50px 20px;
-  text-align: center;
-  max-width: 100%;
-  width: 800px;
+
+  i,
+  p {
+    cursor: pointer;
+  }
+
+  p {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+  }
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $borderb;
+  padding: 15px;
 }
 
 h3 {
@@ -37,34 +68,31 @@ h3 {
   letter-spacing: 2px;
 }
 
-img {
-  width: 100px;
-  margin-bottom: 20px;
-}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: $borderb;
 
-.joke {
-  font-size: 30px;
-  letter-spacing: 1px;
-  line-height: 40px;
-  margin: 50px auto;
-  max-width: 600px;
-}
-
-.btn {
-  background-color: $primary-color;
-  color: $secondary-color;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  padding: 14px 40px;
-  font-size: 16px;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(0.98);
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 10px;
+    outline: none;
   }
+}
 
-  &:focus {
-    outline: 0;
+.todo-list {
+  display: flex;
+  flex-direction: column;
+
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: $borderb;
+    padding: 15px;
   }
 }
