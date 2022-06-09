@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n\nvar tasks = [{\n  description: 'walk the dog',\n  completed: true,\n  index: 1\n}, {\n  description: 'Read books',\n  completed: true,\n  index: 2\n}, {\n  description: 'Go to the gym',\n  completed: false,\n  index: 3\n}, {\n  description: 'Eat fufu',\n  completed: false,\n  index: 4\n}];\nvar toDoList = document.querySelector('.todo-list');\n\nfunction addToDoList() {\n  tasks.forEach(function (task) {\n    toDoList.innerHTML += \"\\n        <li> <input type=\\\"checkbox\\\" name=\\\"completed\\\" id=\\\"completed\\\"> <p>\".concat(task.description, \"</p> <i\\n                        class=\\\"bi bi-three-dots-vertical\\\"></i></li>\");\n  });\n}\n\naddToDoList();\n\n//# sourceURL=webpack://web-pack/./src/index.js?");
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
@@ -117,6 +107,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://web-pack/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n\n\nconst tasks = [\n  {\n    description: 'walk the dog',\n    completed: true,\n    index: 1,\n\n  },\n  {\n    description: 'Read books',\n    completed: true,\n    index: 2,\n\n  },\n  {\n    description: 'Go to the gym',\n    completed: false,\n    index: 3,\n\n  },\n  {\n    description: 'Eat fufu',\n    completed: false,\n    index: 4,\n\n  },\n\n];\n\nconst toDoList = document.querySelector('.todo-list');\n\nfunction addToDoList() {\n  tasks.forEach((task) => {\n    toDoList.innerHTML += `\n        <li> <input type=\"checkbox\" name=\"completed\" id=\"completed\"> <p>${task.description}</p> <i\n                        class=\"bi bi-three-dots-vertical\"></i></li>`;\n  });\n}\n\naddToDoList();\n\n//# sourceURL=webpack://web-pack/./src/index.js?");
 
 /***/ })
 
