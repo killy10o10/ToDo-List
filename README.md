@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-- [App Live Link](https://killy10o10.github.io/ToDo-List/)
+- [App Live Link](https://killy10o10.github.io/ToDo-List/dist/)
 
 ## Getting Started
 
