@@ -42,15 +42,15 @@ body {
   background-color: #fff;
   box-shadow: $box-shadow;
 
-  i,
-  p {
+  i {
     cursor: pointer;
   }
 
-  p {
+  #clear-completed {
     text-align: center;
     background-color: #f0f0f0;
     padding: 10px;
+    cursor: pointer;
   }
 }
 
@@ -87,12 +87,15 @@ form {
   display: flex;
   flex-direction: column;
 
-
   li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: $borderb;
     padding: 15px;
+
+    p {
+      width: 90%;
+    }
   }
 }
