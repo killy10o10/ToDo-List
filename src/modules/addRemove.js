@@ -1,33 +1,19 @@
-// class myObject {
-//   constructor(description, completed, index) {
-//     this.description = description;
-//     this.completed = completed;
-//     this.index = index;
-//   }
-// }
-// const tasks = [];
+import { tasks } from "./globalVariables";
 
-const toDoList = document.querySelector('.todo-list');
+const deleteItem = (currentListItem) => {
+  const pTag = currentListItem.querySelector('p');
+  let initial = pTag.textContent;
 
-const addToDoList = (todoValue) => {
-  toDoList.innerHTML += `
-          <li> <input type="checkbox" name="completed" id="completed"> <p>${todoValue}</p> <i
-                          class="bi bi-three-dots-vertical"></i></li>`;
-};
+  tasks.forEach(element => {
+    if(element.description === initial) {
+      tasks.splice(tasks.indexOf(element), 1);
+    }
+  });
+  tasks.forEach((element, ind) => {
+    element.index = ind + 1;
+  });
+  localStorage.setItem('tasks',  JSON.stringify(tasks));
+  currentListItem.remove();
+}
 
-const textinput = document.querySelector('input');
-const enterIcon = document.querySelector('.input');
-textinput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter' && textinput.value) {
-    e.preventDefault();
-    addToDoList(textinput.value);
-    textinput.value = null;
-  }
-});
-
-enterIcon.addEventListener('click', () => {
-  if (textinput.value) {
-    addToDoList(textinput.value);
-    textinput.value = null;
-  }
-});
+export default deleteItem;
