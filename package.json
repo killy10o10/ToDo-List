@@ -31,7 +31,9 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "install": "^0.13.0",
+    "lodash": "^4.17.21",
+    "npm": "^8.12.1"
   },
   "repository": {
     "type": "git",

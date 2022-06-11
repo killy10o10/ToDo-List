@@ -21,7 +21,7 @@ textinput.addEventListener('keypress', (e) => {
 enterIcon.addEventListener('click', () => {
   if (textinput.value) {
     const newToDo = new MyObject();
-    newToDo.description = textinput;
+    newToDo.description = textinput.value;
     newToDo.index = tasks.length + 1;
     addToDoList(newToDo);
     tasks.push(newToDo);
