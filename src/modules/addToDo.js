@@ -36,19 +36,4 @@ const addToDoList = (todoValue) => {
   });
 };
 
-// toDoList.addEventListener('click', (e) => {
-//   if (e.target.classList.contains('checkbox')) {
-//     const currenTrashIcon = document.querySelectorAll('.bi-trash');
-//     const currentDotIcon = document.querySelectorAll('.bi-three-dots-vertical');
-//     currentDotIcon.forEach((icon) => {
-//       icon.classList.toggle('hide');
-//     });
-//     currenTrashIcon.forEach((trash) => {
-//       trash.classList.toggle('active');
-//     });
-//     const currentCheckBox = e.target.closest('.list-item');
-//     currentCheckBox.classList.toggle('cancelList');
-//   }
-// });
-
 export default addToDoList;
