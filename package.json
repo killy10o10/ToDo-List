@@ -11,12 +11,12 @@
   "author": "Quami Killy",
   "license": "MIT",
   "devDependencies": {
+    "@hint/hint-highest-available-document-mode": "^5.0.13",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
-    "hint": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.52.2",
     "sass-loader": "^13.0.0",
@@ -31,7 +31,9 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "install": "^0.13.0",
+    "lodash": "^4.17.21",
+    "npm": "^8.12.1"
   },
   "repository": {
     "type": "git",

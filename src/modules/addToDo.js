@@ -1,6 +1,7 @@
 import deleteItem from './addRemove.js';
 import edit from './edit.js';
 import { toDoList } from './globalVariables.js';
+import { checkCompletedTask, completedTask } from './interactiveList.js';
 
 const addToDoList = (todoValue) => {
   toDoList.innerHTML += `
@@ -10,6 +11,7 @@ const addToDoList = (todoValue) => {
 
   const editIcon = Array.from(document.querySelectorAll('.bi-three-dots-vertical'));
   const deleteIcon = Array.from(document.querySelectorAll('.bi-trash'));
+  const checkBox = Array.from(document.querySelectorAll('.checkbox'));
 
   editIcon.forEach((icon) => {
     icon.addEventListener('click', () => {
@@ -22,6 +24,14 @@ const addToDoList = (todoValue) => {
     icon.addEventListener('click', () => {
       const currentListitem = icon.closest('.list-item');
       deleteItem(currentListitem);
+    });
+  });
+
+  checkBox.forEach((check) => {
+    const currentListItem = check.closest('.list-item');
+    checkCompletedTask(check, currentListItem);
+    check.addEventListener('change', (event) => {
+      completedTask(currentListItem, event);
     });
   });
 };
