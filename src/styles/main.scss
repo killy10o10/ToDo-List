@@ -105,7 +105,6 @@ form {
 
 .checkedList {
   background-color: antiquewhite;
-  // text-decoration: line-through;
 }
 
 .cancelList {
@@ -116,11 +115,10 @@ form {
   display: none;
 }
 
-.bi-trash.active{
+.bi-trash.active {
   display: block;
 }
 
 .bi-three-dots-vertical.hide {
   display: none;
 }
-

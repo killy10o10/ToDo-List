@@ -1,9 +1,7 @@
 import './styles/main.scss';
 import addToDoList from './modules/addToDo.js';
-import MyObject from './modules/myObject';
-import { tasks } from './modules/globalVariables';
-
-
+import MyObject from './modules/myObject.js';
+import { tasks } from './modules/globalVariables.js';
 
 const textinput = document.querySelector('input');
 const enterIcon = document.querySelector('.input');
@@ -15,7 +13,7 @@ textinput.addEventListener('keypress', (e) => {
     newToDo.index = tasks.length + 1;
     addToDoList(newToDo);
     tasks.push(newToDo);
-    localStorage.setItem('tasks',  JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
     textinput.value = null;
   }
 });
@@ -27,11 +25,11 @@ enterIcon.addEventListener('click', () => {
     newToDo.index = tasks.length + 1;
     addToDoList(newToDo);
     tasks.push(newToDo);
-    localStorage.setItem('tasks',  JSON.stringify(tasks));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
     textinput.value = null;
   }
 });
 
-tasks.forEach(element => {
+tasks.forEach((element) => {
   addToDoList(element);
 });
