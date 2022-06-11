@@ -38,9 +38,10 @@ body {
   flex-direction: column;
   margin: 0 auto;
   border: 1px solid rgba(220, 220, 220, 1);
-  width: 500px;
+  width: 550px;
   background-color: #fff;
   box-shadow: $box-shadow;
+  transition: $transition;
 
   i {
     cursor: pointer;
@@ -86,6 +87,7 @@ form {
 .todo-list {
   display: flex;
   flex-direction: column;
+  transition: $transition;
 
   li {
     display: flex;
@@ -93,9 +95,32 @@ form {
     justify-content: space-between;
     border-bottom: $borderb;
     padding: 15px;
+    transition: $transition;
 
     p {
       width: 90%;
     }
   }
 }
+
+.checkedList {
+  background-color: antiquewhite;
+  // text-decoration: line-through;
+}
+
+.cancelList {
+  text-decoration: line-through;
+}
+
+.bi-trash {
+  display: none;
+}
+
+.bi-trash.active{
+  display: block;
+}
+
+.bi-three-dots-vertical.hide {
+  display: none;
+}
+
