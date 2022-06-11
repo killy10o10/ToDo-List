@@ -36,10 +36,10 @@ tasks.forEach((element) => {
 });
 
 clearbtn.addEventListener('click', () => {
-  toDoList.innerHTML = ``;
+  toDoList.innerHTML = '';
   const newtasks = tasks.filter((task) => task.completed === true);
-  newtasks.forEach(element => {
-      tasks.splice(tasks.indexOf(element), 1);
+  newtasks.forEach((element) => {
+    tasks.splice(tasks.indexOf(element), 1);
   });
   localStorage.setItem('tasks', JSON.stringify(tasks));
   tasks.forEach((element) => {
