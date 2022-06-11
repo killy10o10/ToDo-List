@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 - run ` git clone git@github.com:killy10o10/ToDo-List.git`
 - run ` cd ToDo-List`
 - run `npm install`
-- run `npm build`
+- run `npm run build`
 - run `npm run dev`
 - Enter `http://localhost:3000/` in your browser
 

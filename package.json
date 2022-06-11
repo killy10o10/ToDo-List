@@ -1,7 +1,7 @@
 {
   "name": "web-pack",
   "version": "1.0.0",
-  "description": "",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -11,10 +11,7 @@
   "author": "Quami Killy",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.18.2",
-    "@babel/preset-env": "^7.18.2",
     "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -32,5 +29,16 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.2"
-  }
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/killy10o10/ToDo-List.git"
+  },
+  "bugs": {
+    "url": "https://github.com/killy10o10/ToDo-List/issues"
+  },
+  "homepage": "https://github.com/killy10o10/ToDo-List#readme"
 }
