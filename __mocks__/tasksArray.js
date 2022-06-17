@@ -6,12 +6,12 @@ const tasks = [
   },
   {
     description: 'Drink Milk',
-    completed: false,
+    completed: true,
     index: 2,
   },
   {
     description: 'Sell Milk',
-    completed: false,
+    completed: true,
     index: 3,
   },
   {
