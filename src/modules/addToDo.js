@@ -20,6 +20,14 @@ const addToDoList = (todoValue) => {
     });
   });
 
+  // checkBox.forEach((check) => {
+  //   const currentListItem = check.closest('.list-item');
+  //   checkCompletedTask(check, currentListItem);
+  //   check.addEventListener('change', (event) => {
+  //     completedTask(currentListItem, event);
+  //   });
+  // });
+
   deleteIcon.forEach((icon) => {
     icon.addEventListener('click', () => {
       const currentListitem = icon.closest('.list-item');
